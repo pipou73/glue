@@ -1,0 +1,46 @@
+sylius_resource:
+    resources:
+        app.book:
+            classes:
+                model: AppBundle\Entity\Book
+                form: AppBundle\Form\Type\BookType
+            translation:
+                classes:
+                    model: AppBundle\Entity\BookTranslation
+                    form: AppBundle\Form\Type\BookTranslationType
+
+sylius_grid:
+    grids:
+        app_admin_book:
+            driver:
+                name: doctrine/orm
+                options:
+                    class: AppBundle\Entity\Book
+            fields:
+                image:
+                    type: twig
+                    label: sylius.ui.image
+                    path: .
+                    options:
+                        template: "@RewindAdmin/Grid/Field/_image.html.twig"
+                id:
+                    type: string
+                    label: sylius.ui.id
+                code:
+                    type: string
+                    label: sylius.ui.code
+                position:
+                    type: twig
+                    label: sylius.ui.position
+                    sortable: ~
+                    options:
+                        template: "@SyliusUi/Grid/Field/position.html.twig"
+            actions:
+                main:
+                    create:
+                        type: create
+                item:
+                    update:
+                        type: update
+                    delete:
+                        type: delete

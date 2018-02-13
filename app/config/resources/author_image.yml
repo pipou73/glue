@@ -1,0 +1,6 @@
+sylius_resource:
+    resources:
+        app.author_image:
+            classes:
+                model: AppBundle\Entity\AuthorImage
+                form: AppBundle\Form\Type\AuthorImageType

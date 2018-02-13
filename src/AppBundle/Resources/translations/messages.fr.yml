@@ -1,0 +1,15 @@
+app.ui.edit_author: Auteur
+app.ui.authors: Auteur
+app.ui.books: Book
+app.ui.new_book: Nouveux Book
+app.ui.new_author: Nouveux auteur
+app.ui.edit_book: Edition d'un livre
+app.ui.edit_author: Edition d'un auteur
+sylius.menu.admin.main.resources: Resources
+sylius.menu.admin.main.resources.author: Auteurs
+sylius.menu.admin.main.resources.book: Book
+sylius.form.author.images: Images
+sylius.form.book.image: Image
+sylius.ui.manage_books: Gestions des Book
+sylius.ui.list_books: List des Books
+sylius.form.image.type: Image

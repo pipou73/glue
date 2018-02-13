@@ -1,0 +1,44 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+_liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+app_author:
+    resource: |
+        alias: app.author
+        section: admin
+        templates: RewindAdminBundle:Crud
+        grid: app_admin_author
+        redirect: index
+    type: sylius.resource
+
+app_book:
+    resource: |
+        alias: app.book
+        section: admin
+        templates: RewindAdminBundle:Crud
+        grid: app_admin_book
+        redirect: index
+    type: sylius.resource
+
+
+#sylius_admin_admin_user:
+#    resource: |
+#        alias: sylius.admin_user
+#        section: admin
+#        path: users
+#        templates: SyliusAdminBundle:Crud
+#        except: ['show']
+#        redirect: index
+#        grid: sylius_admin_admin_user
+#        permission: true
+#        vars:
+#            all:
+#                subheader: sylius.ui.manage_users_able_to_access_administration_panel
+#                templates:
+#                    form: SyliusAdminBundle:AdminUser:_form.html.twig
+#            index:
+#                icon: lock
+#    type: sylius.resource

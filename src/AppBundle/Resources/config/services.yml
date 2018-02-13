@@ -1,0 +1,17 @@
+services:
+    admin.listener.images_upload:
+        parent: rewind.media.images_upload
+        tags:
+            - { name: kernel.event_listener, event: "app.author.pre_create", method: "uploadImages" }
+            - { name: kernel.event_listener, event: "app.author.pre_update", method: "uploadImages" }
+
+    admin.listener.image_upload:
+        parent: rewind.media.image_upload
+        tags:
+            - { name: kernel.event_listener, event: "app.book.pre_create", method: "uploadImage" }
+            - { name: kernel.event_listener, event: "app.book.pre_update", method: "uploadImage" }
+
+    app.listener.menu.admin:
+        class: AppBundle\Menu\AdminMenuListener
+        tags:
+            - { name: kernel.event_listener, event: rewind.menu.admin.main, method: addAdminMenuItems }

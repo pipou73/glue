@@ -1,0 +1,37 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "webpack configuration",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.17.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "ts-loader": "^2.2.2",
+    "typescript": "^2.4.1",
+    "semantic-ui": "^2.2.11"
+  },
+  "scripts": {
+    "encore.dev": "encore dev",
+    "encore.dev-server": "encore dev-server --hot",
+    "encore.prod": "encore production",
+    "encore.watch": "encore dev --watch",
+    "start": "node ./vendor/rewind/admin-bundle/mergeNodePackage.js && node ./vendor/rewind/media-bundle/mergeNodePackage.js",
+    "build:admin:prod": "encore production --config ./vendor/rewind/admin-bundle/webpack.config.js && encore production --config ./vendor/rewind/media-bundle/webpack.config.js",
+    "build:admin:dev": "encore dev --config ./vendor/rewind/admin-bundle/webpack.config.js && encore dev --config ./vendor/rewind/media-bundle/webpack.config.js",
+    "start:media": "node ./vendor/rewind/media-bundle/mergeNodePackage.js",
+    "build:media:prod": "encore production --config ./vendor/rewind/media-bundle/webpack.config.js",
+    "build:media:dev": "encore dev --config ./vendor/rewind/media-bundle/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
