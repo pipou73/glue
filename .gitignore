@@ -20,5 +20,5 @@
 /web/media
 /bin
 /node_modules
-
+/semantic
 .idea
